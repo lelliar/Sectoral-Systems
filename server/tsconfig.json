@@ -12,10 +12,10 @@
     "baseUrl": "./",
     "incremental": true,
     "paths": {
-      "@libs/db": [
+      "@app/db": [
         "libs/db/src"
       ],
-      "@libs/db/*": [
+      "@app/db/*": [
         "libs/db/src/*"
       ],
       "@app/common": [

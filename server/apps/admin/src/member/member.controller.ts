@@ -1,10 +1,17 @@
-import { Controller, Get, Post, Body, Put, Param, Delete } from '@nestjs/common';
+import { Controller } from '@nestjs/common';
+import { Member } from '@app/db/model/member.model';
+import { Crud } from 'nestjs-mongoose-crud'
 import { InjectModel } from 'nestjs-typegoose';
-import { Lunbo } from '@libs/db/models/lunbo.model';
-import { ApiOperation } from '@nestjs/swagger';
+import { ReturnModelType } from '@typegoose/typegoose';
+import { ApiTags } from '@nestjs/swagger';
 
+@Crud({
+    model:Member
+})
 @Controller('member')
+@ApiTags('成员')
 export class MemberController {
-    constructor(@InjectModel(Me) private readonly model){}
-    
+    constructor(@InjectModel(Member) private readonly model:ReturnModelType<typeof Member>){
+
+    }
 }
