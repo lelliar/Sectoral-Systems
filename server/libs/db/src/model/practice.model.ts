@@ -5,6 +5,10 @@ export class Practice{
     @ApiProperty({ description:'名称' })
     @prop()
     name:string
+    
+    @ApiProperty({ description:'公司' })
+    @prop()
+    company:string
 
     @ApiProperty({ description:'工资' })
     @prop()

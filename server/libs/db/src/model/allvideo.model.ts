@@ -1,6 +1,7 @@
 import { ApiProperty } from "@nestjs/swagger";
 import { prop, modelOptions, Ref } from "@typegoose/typegoose";
 import { Category } from "./category.model";
+import { allCategory } from "./allcategory.model";
 
 @modelOptions({
     schemaOptions:{
@@ -8,7 +9,7 @@ import { Category } from "./category.model";
     }
 })
 
-export class Video {
+export class allVideo {
     @ApiProperty({ description:'名字' })
     @prop()
     name:string
@@ -16,6 +17,7 @@ export class Video {
     @ApiProperty({ description:'描述' })
     @prop()
     description:string
+    
     
     @ApiProperty({ description:'封面图' })
     @prop()
@@ -26,6 +28,6 @@ export class Video {
     video:string
 
     @ApiProperty({ description:'关联视频' })
-    @prop({ ref:'Category' })
-    Category:Ref<Category>
+    @prop({ ref:'allCategory' })
+    Category:Ref<allCategory>
 }

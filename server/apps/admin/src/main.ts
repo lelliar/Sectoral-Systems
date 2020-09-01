@@ -5,10 +5,12 @@ import { NestExpressApplication } from '@nestjs/platform-express';
 
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
+
   app.enableCors()//跨域请求
   app.useStaticAssets('uploads' , {
     prefix:'/uploads'
   })
+  
   const options = new DocumentBuilder()
   .setTitle('Cats example')
   .setDescription('The cats API description')

@@ -6,6 +6,10 @@ export class Janzhi{
     @prop()
     name:string
 
+    @ApiProperty({ description:'公司' })
+    @prop()
+    company:string
+
     @ApiProperty({ description:'工资' })
     @prop()
     money:string

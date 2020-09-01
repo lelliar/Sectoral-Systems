@@ -16,6 +16,10 @@ export class Article{
     @prop()
     writer:string
 
+    @ApiProperty({ description:'图片' })
+    @prop()
+    cover:string
+
     @ApiProperty({ description:'文章内容' })
     @prop()
     content:string

@@ -13,6 +13,9 @@ import { CommentModule } from './comment/comment.module';
 import { PracticeModule } from './practice/practice.module';
 import { MulterModule } from '@nestjs/platform-express';
 import { CategoryModule } from './category/category.module';
+import { AllcategoryModule } from './allcategory/allcategory.module';
+import { AllvideoModule } from './allvideo/allvideo.module';
+
 
 const MAO = require('multer-aliyun-oss');
 
@@ -32,7 +35,7 @@ const MAO = require('multer-aliyun-oss');
         }
       }
     }),
-    UserModule , CommonModule, LunboModule, VideoModule, MemberModule, AtricleModule, MoiveModule, JanzhiModule, CommentModule, PracticeModule, CategoryModule],
+    UserModule , CommonModule, LunboModule, VideoModule, MemberModule, AtricleModule, MoiveModule, JanzhiModule, CommentModule, PracticeModule, CategoryModule, AllcategoryModule, AllvideoModule],
   controllers: [AppController],
   providers: [AppService],
 })

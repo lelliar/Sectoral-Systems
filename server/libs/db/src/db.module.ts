@@ -11,6 +11,8 @@ import { Janzhi } from './model/jianzhi.model';
 import { Comment } from './model/comment.model';
 import { Practice } from './model/practice.model';
 import { Category } from './model/category.model';
+import { allCategory } from './model/allcategory.model';
+import { allVideo } from './model/allvideo.model';
 
 const models = TypegooseModule.forFeature([
   User,
@@ -22,7 +24,9 @@ const models = TypegooseModule.forFeature([
   Janzhi,
   Comment,
   Practice,
-  Category
+  Category,
+  allCategory,
+  allVideo
 ])
 
 @Global()
